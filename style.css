@@ -134,9 +134,18 @@ span.material-icons {
 /*davenport-showcase*/
 .davenport-showcase .card figure {
   position: relative;
+  overflow: hidden;
+}
+.davenport-showcase .card figure img {
+  transition: all 0.3s ease;
 }
 
-.davenport-showcase .card figure p {
+.davenport-showcase .card figure:hover img {
+  cursor: pointer;
+  transform: scale(1.125);
+}
+
+.davenport-showcase .card figure p.catagory {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -146,6 +155,28 @@ span.material-icons {
   border-radius: 30px;
   margin-left: 10px;
   padding: 5px 10px;
+}
+
+.davenport-showcase .card figure p.catagory-discount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--clr_white);
+
+  background-color: #8a44e5;
+  border-radius: 5px;
+  height: 60px;
+  width: 60px;
+  font-size: 18px;
+  line-height: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font_cardo);
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
 .davenport-showcase .card figure p.pink {
@@ -194,8 +225,8 @@ nav {
   align-items: center;
   width: 100%;
   gap: 30px;
-  height: 50px;
-  line-height: 3rem;
+  height: 60px;
+  line-height: 3.6rem;
 }
 
 .navbar ul li a {
@@ -247,7 +278,7 @@ nav {
 nav ul.nav-links li.nav-item > ul.sub-menu {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 60px;
   left: 0;
   color: #fff;
   font-size: 14px;
@@ -292,7 +323,7 @@ nav ul.nav-links li.nav-item > ul.mega-menu {
   width: 1150px;
   background-color: #1f1c1c;
   position: absolute;
-  top: 50px;
+  top: 60px;
   z-index: 200;
   left: 0;
   transform: translateX(-47%);
